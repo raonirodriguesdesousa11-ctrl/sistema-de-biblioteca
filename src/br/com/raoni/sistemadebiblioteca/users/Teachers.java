@@ -1,5 +1,5 @@
 package br.com.raoni.sistemadebiblioteca.users;
 
-public class teachers extends users {
+public class Teachers extends Users {
     int numberOfBooks;
 }

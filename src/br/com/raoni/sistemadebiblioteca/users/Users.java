@@ -1,6 +1,6 @@
 package br.com.raoni.sistemadebiblioteca.users;
 
-public class users {
+public class Users {
     private String name;
     private int cpf;
     private int age;
