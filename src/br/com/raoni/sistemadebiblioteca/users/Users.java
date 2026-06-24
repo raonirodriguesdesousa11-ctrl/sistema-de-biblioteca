@@ -2,14 +2,14 @@ package br.com.raoni.sistemadebiblioteca.users;
 
 public class Users {
     private String name;
-    private int cpf;
+    private final int CPF;
     private int age;
-    private int numberOfBooks;
+    private int numberOfBooks = 0;
     private boolean blocked = false;
 
-    void register(String name, int cpf, int age) {
+    public Users(String name, int CPF, int age) {
         this.name = name;
-        this.cpf = cpf;
+        this.CPF = CPF;
         this.age = age;
     }
 }
