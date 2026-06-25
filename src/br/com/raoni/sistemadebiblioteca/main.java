@@ -12,11 +12,12 @@ public class main {
                 Escolha uma opção:
                 1-adicionar um livro
                 2-emprestrar um livro
-                3-ver livros disponíveis
-                4-sair
+                3-adicionar usuário
+                4-ver livros disponíveis
+                5-sair
                 """;
         int x = 0;
-        while(x != 4){
+        while(x != 5){
             System.out.println(text);
             x = scanner.nextInt();
             switch (x){
