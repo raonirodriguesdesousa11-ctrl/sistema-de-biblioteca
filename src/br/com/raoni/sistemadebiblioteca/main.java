@@ -11,9 +11,9 @@ public class main {
         String text = """
                 Escolha uma opção:
                 1-adicionar um livro
-                2-emprestrar um livro
-                3-adicionar usuário
-                4-ver livros disponíveis
+                2-adicionar usuário
+                3-ver livros disponíveis
+                4-emprestrar um livro
                 5-sair
                 """;
         int x = 0;

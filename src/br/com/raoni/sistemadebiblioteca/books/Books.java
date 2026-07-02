@@ -6,37 +6,38 @@ import java.util.Scanner;
 
 public class Books {
     private String name;
-    private final int ID;
     private boolean borrowed = false;
     private int quantity;
-    private static ArrayList<Books> arrayOfbooks = new ArrayList<Books>();
+    private static ArrayList<Books> arrayOfbooks = new ArrayList<>();
 
     static Scanner scanner = new Scanner(System.in);
 
-    public Books(int id, String name) {
-        ID = id;
-        this.name = name;
-    }
+    public Books(String name) {this.name = name;}
 
     public String getName() {
         return name;
     }
 
-    void toLoan(){
-        borrowed = true;
-    }
-
-
     public static void createBook(){
-        System.out.println("digite o ID do livro e o nome dele");
-        int idOfBookCreated = scanner.nextInt();
-        scanner.nextLine();
+        System.out.println("diga o nome do livro:");
         String nameOfBookCreated = scanner.nextLine();
 
-        Books bookCreated = new Books(idOfBookCreated, nameOfBookCreated);
-        arrayOfbooks.add(bookCreated);
+        try {
+            saveBook(nameOfBookCreated);
+            System.out.println("livro criado!!!\n");
+        }catch (IllegalArgumentException e){
+            System.out.println("[ERRO]: " + e.getMessage());
+        }
 
-        System.out.println("livro criado");
+    }
+
+    public static void saveBook(String name){
+        if (name == null || name.trim().isEmpty()){
+            throw new IllegalArgumentException("o nome não pode ser vazio");
+        }
+
+        Books bookCreated = new Books(name);
+        arrayOfbooks.add(bookCreated);
     }
 
 }
