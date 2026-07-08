@@ -1,8 +1,9 @@
 package br.com.raoni.sistemadebiblioteca;
 
 import java.util.Scanner;
-import static br.com.raoni.sistemadebiblioteca.books.Books.createBook;
 
+import static br.com.raoni.sistemadebiblioteca.books.Books.*;
+import static br.com.raoni.sistemadebiblioteca.users.Users.createUser;
 
 public class main {
     public static void main() {
@@ -25,7 +26,11 @@ public class main {
                     createBook();
                     break;
                 case 2:
-
+                    createUser();
+                    break;
+                case 3:
+                    test();
+                    System.out.println(getArrayBooks());
 
             }
         }

@@ -8,11 +8,26 @@ public class Books {
     private String name;
     private boolean borrowed = false;
     private int quantity;
-    private static ArrayList<Books> arrayOfbooks = new ArrayList<>();
+    private static ArrayList<Books> arrayBooks = new ArrayList<>();
+
+    static Books bookTest = new Books("Raoni Gostoso");
+
+    public static void test(){
+        arrayBooks.add(bookTest);
+    }
+
+    public static ArrayList<Books> getArrayBooks() {
+        return arrayBooks;
+    }
 
     static Scanner scanner = new Scanner(System.in);
 
     public Books(String name) {this.name = name;}
+
+    @Override
+    public String toString(){
+        return name + "- autor desconhecido \n";
+    }
 
     public String getName() {
         return name;
@@ -37,7 +52,7 @@ public class Books {
         }
 
         Books bookCreated = new Books(name);
-        arrayOfbooks.add(bookCreated);
+        arrayBooks.add(bookCreated);
     }
 
 }
